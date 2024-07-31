@@ -626,7 +626,7 @@ document.querySelectorAll("input").forEach(input => {
 
 //aos
 AOS.init({
-  duration: 1200,
+  duration: 2500,
   once: true,
 });    
 
