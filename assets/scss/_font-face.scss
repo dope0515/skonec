@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'RoadRage';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/RoadRage-Regular.woff2') format('woff2');
+}
+
+//PostNoBills
+@font-face {
+	font-family: 'PostNoBills';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/postnobillscolombo-bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'PostNoBills';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/postnobillscolombo-semibold.woff') format('woff');
+}
+@font-face {
+	font-family: 'PostNoBills';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/postnobillscolombo-medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'PostNoBills';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/postnobillscolombo-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'PostNoBills';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('../fonts/postnobillscolombo-light.woff') format('woff');
+}
+
+//Poppins 100 - 900
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url('../fonts/Poppins-Black.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url('../fonts/Poppins-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/Poppins-Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/Poppins-SemiBold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/Poppins-Medium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('../fonts/Poppins-Light.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url('../fonts/Poppins-ExtraLight.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+	src: url('../fonts/Poppins-Thin.woff2') format('woff2');
+}
+
+//Hahmlet 100 - 900
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-Black.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-SemiBold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-Medium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-Light.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-ExtraLight.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Hahmlet';
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+	src: url('../fonts/Hahmlet-Thin.woff2') format('woff2');
+}
+
+//pretendard 100 - 900
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Black.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 300;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 200;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-ExtraLight.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 100;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Thin.woff2') format('woff2');
+}
