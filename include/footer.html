@@ -1,56 +1,70 @@
 <footer id="footer" class="footer">
 	<div class="container">
 		<div class="footer-wrap">
-			<div class="footer__logo">
-				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
-			</div>
-			<div class="footer__info">
-				<ul class="d-flex align-items-center mt-6 mx-n2">
-					<li class="px-2"><a href="../policy/privacy.html" class="link font-weight-medium">개인정보처리방침</a></li>
-					<li class="px-2"><a href="../pop/email-popup.html" class="link popup-link">이메일무단수집거부</a></li>
-				</ul>
-
-				<div class="footer__txt mt-6">
-					<p class="txt">
-						<span>TEL :
-							<?=$SS[sitetel]?>
-						</span>
-						<span>이메일 :
-							<?=$SS[siteemail]?>
-						</span>
-						<span>사업자번호 :
-							<?=$SS[sitecompanyno]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle1]?> :
-							<?=$SS[AddValue1]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle2]?> :
-							<?=$SS[AddValue2]?>
-						</span>
-					</p>
-					<p class="txt">
-						<span>
-							<?=$SS[AddTitle3]?> :
-							<?=$SS[AddValue3]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle4]?> :
-							<?=$SS[AddValue4]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle5]?> :
-							<?=$SS[AddValue5]?>
-						</span>
+			<div class="bx-1">
+				<div class="footer-logo">
+					<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+				</div>
+				<div class="footer-info">
+					<strong class="company">
+						Skonec Entertainment
+					</strong>
+					<ul class="info-list">
+						<li>
+							<span class="tit">TEL</span>
+							<span class="des"><?=$SS[sitetel]?></span>
+						</li>
+						<li>
+							<span class="tit"><?=$SS[AddTitle1]?></span>
+							<span class="des"><?=$SS[AddValue1]?></span>
+						</li>
+						<li>
+							<span class="tit"><?=$SS[AddTitle2]?></span>
+							<span class="des"><?=$SS[AddValue2]?></span>
+						</li>
+					</ul>
+					<p class="footer-copyright mt-4">
+						<?=$SS[sitecopyright]?>
 					</p>
 				</div>
-
-				<p class="footer-copyright mt-4">
-					<?=$SS[sitecopyright]?>
-					<a href="https://www.masstige.biz" target="_blank" title="대한민국 최고의 주문제작 홈페이지 제작업체 - 매스티지"
-						class="created-masstige">Created By <span class="masstige">Masstige.</span></a>
-				</p>
+			</div>
+			<div class="bx-2">
+				<ul class="policy-list">
+					<li>
+						<a href="../pop/privacy-popup.html" class="popup-link">개인정보처리방침</a>
+					</li>
+					<li>
+						<!--클릭시 고객사에서 등록한 이메일 보내기 자동실행-->
+						<button type="button">CONTACT US</button>
+					</li>
+				</ul>
+				<ul class="icon-list">
+					<li>
+						<a href="https://www.facebook.com/skonecvr" target="_blank">
+							<img src="../assets/images/icon/icon_facebook.svg" alt="페이스북">
+						</a>
+					</li>
+					<li>
+						<a href="https://x.com/Skonecxr/status/1763071662474571959" target="_blank">
+							<img src="../assets/images/icon/icon_x.svg" alt="트위터">
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="../assets/images/icon/icon_instagram.svg" alt="인스타그램">
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="../assets/images/icon/icon_discord.svg" alt="디스코드">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/@skonecent" target="_blank">
+							<img src="../assets/images/icon/icon_youtube.svg" alt="유튜브">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

@@ -1,47 +1,116 @@
 @charset "UTF-8";
 
 .footer {
-	padding: rem(50) 0;
-	background: #333;
-	color: #eee;
+	background: $black;
 	font-size: rem(13);
 	font-weight: 100;
-
-	&__logo {
-		img {
-			width: em(140);
+	padding: rem(60) 0;
+	&-wrap {
+		display: flex;
+		justify-content: space-between;
+		.bx-1 {
+			.company {
+				display: inline-block;
+				font-weight: 700;
+				font-size: rem(22);
+				color: $white;
+				margin-top: rem(30);
+			}
+			.info-list {
+				margin-top: rem(20);
+				li {
+					display: flex;
+					align-items: center;
+					gap: rem(14);
+					.tit {
+						color: rgba($color: $white, $alpha: 0.5);
+					}
+					.des {
+						color: $white;						
+					}
+					& + li {
+						margin-top: rem(12);
+					}
+				}
+			}
+		}
+		.bx-2 {
+			.policy-list {
+				display: flex;
+				align-items: center;
+				li {
+					display: flex;
+					align-items: center;
+					a, button {
+						display: block;
+						font-weight: 600;
+						font-size: rem(18);
+						color: rgba($color: $white, $alpha: 0.7);
+					}
+					& + li {
+						&::before {
+							content: '';
+							display: inline-block;
+							width: 1px;
+							height: rem(12);
+							background-color: $white;
+							margin: 0 rem(20);
+							vertical-align: rem(-2);
+						}
+					}
+				}
+			}
+			.icon-list {
+				display: flex;
+				align-items: center;
+				gap: rem(24);
+				margin-top: rem(46);
+			}
 		}
 	}
+	&-copyright {
+		font-size: rem(14);
+		color: rgba($color: $white, $alpha: 0.5);
+	}
+}
 
-	// 푸터 텍스트 구분선 스타일 샘플
-	&__txt {
-		position: relative;
-		overflow: hidden;
-		left: -0.5em;
-		.txt {
-			span {
-				position: relative;
-				display: inline-block;
-				padding: 0 0.5em;
-				&:before {
-					content: '';
-					left: -1px;
-					height: 0.8em;
-					top: 50%;
-					margin-top: -0.4em;
-					position: absolute;
-					border-left: 1px solid lighten(#999, 10%);
+@include mdq-max(lg) {
+	.footer {
+		&-wrap {
+			display: block;
+			.bx-1 {
+				.info-list {
+					li {
+
+					}
+				}
+			}
+			.bx-2 {
+				margin-top: rem(40);
+				.policy-list {
+					width: 100%;
 				}
 			}
 		}
 	}
+}
 
-	.created-masstige {
-		.masstige {
-			font-weight: 500;
-		}
-		&:hover {
-			color: #7d67ff;
+@include mdq-max(sm) {
+	.footer {
+		&-wrap {
+			.bx-1 {
+				.info-list {
+					li {
+						display: block;
+						span {
+							display: block;
+						}
+						.des {
+							margin-top: rem(10);
+						}
+					}
+				}
+			}
 		}
 	}
 }

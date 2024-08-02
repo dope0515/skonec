@@ -28,8 +28,9 @@
 					<div class="sec-tit">
 						<div class="tit-bx" data-aos="fade-right">
 							<h2 class="sub-tit">EPISODE</h2>
+							<p class="tit">단편 옴니버스 형식의<br> 미스터리 퍼즐</p>
 						</div>
-						<div class="des-bx" data-aos="fade-left" data-aos-delay="200">
+						<div class="des-bx mt-16" data-aos="fade-left" data-aos-delay="200">
 							<p class="des">
 								어나더도어는 단편 옴니버스 형식으로 즐기는 <br>
 								호러·어드벤처 테마 미스터리 퍼즐 게임입니다. <br>
@@ -79,7 +80,7 @@
 							<!-- S : 컨텐츠 내용-->
 							<div class="txt-bx">
 								<p id="videoTitle" class="tit">Jacob’s Prison</p>
-								<p id="videoDescription" class="des">제이콥 박사는 딸을 살리기 위해 사람들을 납치해서 감옥에 가둔 후 실험에 이용한다. 박사가 설치해 놓은 몇 가지 트릭을 풀면 감옥을 나갈 수 있다!<br> 삶에 대한 의지를 보여라, 마지막 기회마저 놓친다면 당신은 실험에 이용되고 처참히 버려질 것이다.</p>
+								<div id="videoDescription" class="des">제이콥 박사는 딸을 살리기 위해 사람들을 납치해서 감옥에 가둔 후 실험에 이용한다. 박사가 설치해 놓은 몇 가지 트릭을 풀면 감옥을 나갈 수 있다!<br> 삶에 대한 의지를 보여라, 마지막 기회마저 놓친다면 당신은 실험에 이용되고 처참히 버려질 것이다.</div>
 							</div>
 							<!-- E : 컨텐츠 내용-->
 						</div>
@@ -95,7 +96,10 @@
 				</div>
 				<div class="container">
 					<div class="sec-tit">
-						<h2 class="sub-tit" data-aos="fade-right">NEWS</h2>
+						<div class="tit-bx">
+							<h2 class="sub-tit" data-aos="fade-right">NEWS</h2>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">최신소식</p>
+						</div>
 					</div>
 					<ul class="list-bx">
 						<? for($i=1; $i < 4; $i++){?>
@@ -124,11 +128,18 @@
 				</div>
 			</section>
 			<!-- E : News -->
+			<!-- S : presskit-->
 			<section class="section section-press-kit">
+				<div class="doll-img ani-effect">
+					<img src="../assets/images/main/doll.png" alt="인형">
+				</div>
 				<div class="container">
 					<!-- S : 섹션 타이틀-->
 					<div class="sec-tit">
-						<h2 class="sub-tit" data-aos="fade-right">PRESS KIT</h2>
+						<div class="tit-bx">
+							<h2 class="sub-tit" data-aos="fade-right">PRESS KIT</h2>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">미디어 리소스</p>
+						</div>
 						<p class="des" data-aos="fade-left">
 							최신 게임 자료, 스크린샷, 로고 및 홍보용 이미지를 확인하고, <br>
 							여러분의 콘텐츠에 활용해보세요. <br>
@@ -190,6 +201,123 @@
 					<!-- E : 리스트 영역-->
 				</div>
 			</section>
+			<!-- E : presskit-->
+			<!-- S : media-->
+			<section class="section section-media">
+				<div class="container">
+					<!-- S : 섹션 타이틀-->
+					<div class="sec-tit">
+						<div class="tit-bx">
+							<h2 class="sub-tit" data-aos="fade-right">PRESS KIT</h2>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">영상 갤러리</p>
+						</div>
+					</div>
+					<!-- E : 섹션 타이틀-->
+					<!-- S : 슬라이드 영역-->		
+					<div class="slide-bx">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<? for($i=0; $i < 5; $i++) {?>
+								<div class="swiper-slide">
+									<a href="../pop/video-pop.html" class="popup-link">
+										<div class="img-bx" style="background-image: url(../assets/images/main/media_1.jpg);">
+											<img src="../assets/images/base_995x560.png" alt="비디오 썸네일">
+										</div>
+									</a>
+								</div>
+								<?}?>
+							</div>
+						</div>
+						<div class="slide-control">
+							<button type="button" class="slide-btn slide-prev"></button>
+							<button type="button" class="slide-btn slide-next"></button>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<!-- E : 슬라이드 영역-->
+				</div>
+			</section>
+			<!-- E : media-->
+			<!-- S : Notice-->
+			<section class="section section-notice">
+				<div class="container">
+					<!-- S : 섹션 타이틀-->
+					<div class="sec-tit">
+						<div class="tit-bx">
+							<h2 class="sub-tit" data-aos="fade-right">NOTICE</h2>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">게임의 최신 소식을 <br>만나보세요</p>
+						</div>
+						<p class="des mt-15" data-aos="fade-left">
+							우리 게임의 최신 소식과 업데이트를 확인하세요! <br>
+							새로운 에피소드, 이벤트, 패치 노트 등 모든 정보를 빠르게 전달해드립니다. <br>
+							게임의 최신 트렌드를 놓치지 말고 바로 확인해보세요.
+						</p>
+					</div>
+					<!-- E : 섹션 타이틀-->
+					<!-- S : 리스트 영역-->
+					<ul class="list-bx">
+						<? for($i=0; $i < 3; $i++) {?>
+						<li data-aos="fade-up" data-aos-delay="<?=$i?>00">
+							<a href="javascript:void(0)">
+								<div class="img-wrap">
+									<div class="img-bx" style="background-image: url(../assets/images/main/notice_1.jpg);">
+										<img src="../assets/images/base_440x300.png" alt="소식 이미지 출력">
+									</div>
+								</div>
+								<div class="txt-bx">
+									<p class="tit">
+										제목출력영역입니다제목출력영역입니다제목출력
+									</p>
+									<p class="date">2024.06.08</p>
+								</div>
+							</a>
+						</li>
+						<?}?>
+					</ul>
+					<!-- E : 리스트 영역-->
+				</div>
+			</section>
+			<!-- E : Notice-->
+			<!-- S : faq-->
+			<section class="section section-faq">
+				<div class="bg-bx ani-effect">
+					<img src="../assets/images/main/fag_bg.png" alt="배경 이미지">
+				</div>
+				<div class="container">
+					<div class="sec-tit">
+						<div class="tit-bx">
+							<h2 class="sub-tit" data-aos="fade-right">FAQ</h2>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">자주 묻는 질문</p>
+						</div>
+					</div>
+					<ul class="list-bx">
+						<? for($i=0; $i < 3; $i++) {?>
+						<li data-aos="fade-up" data-aos-delay="<?=$i?>00" data-aos-duration="1500">
+							<button type="button" class="question">
+								<p class="alphabet">
+									Q
+								</p>
+								<p class="tit">이벤트 참여는 어떻게 하나요?</p>
+							</button>
+							<div class="answer">
+								<div class="inner">
+									<p class="alphabet">
+										A
+									</p>
+									<div class="board-bx">
+										<p>입력한 내용들이 출력됩니다.</p>
+										<p>입력한 내용들이 출력됩니다.</p><br>
+										<p>입력한 내용들이 출력됩니다.</p>
+										<p>입력한 내용들이 출력됩니다.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<?}?>
+					</ul>
+				</div>
+			</section>
+			<!-- E : faq-->
 		</main>
 
 		<? include "../include/footer.html" ?>
@@ -255,30 +383,48 @@
 				const videoTitle = $('#videoTitle');
 				const videoDescription = $('#videoDescription');
 				let currentVideoSrc = '';  // 현재 비디오 src를 저장할 변수
+				let canClick = true; // 클릭 가능 여부를 확인하는 변수
 
 				videoTabBtn.on('click', function() {
+					if (!canClick || $(this).hasClass('inactive') || $(this).hasClass('active')) return;
+
+					// 클릭 비활성화
+					canClick = false;
+
+					$(this).addClass('inactive'); // 비활성화 클래스 추가
+
+					setTimeout(() => {
+						$(this).removeClass('inactive'); // 0.3초 후에 비활성화 클래스 제거
+					}, 300);
+
 					// 모든 버튼에서 'active' 클래스 제거
-					videoTabBtn.removeClass('active'); 
+					videoTabBtn.removeClass('active');
 
 					// 클릭된 버튼에 'active' 클래스 추가
-					$(this).addClass('active'); 
+					$(this).addClass('active');
 					$('.tab-body').addClass('animating');
-					setTimeout(function(){
+					setTimeout(function() {
 						$('.tab-body').removeClass('animating');
-					},1500)
+					}, 1500);
+
 					// 클릭된 버튼의 data-index 값을 가져오기
 					const index = $(this).data('index');
 					const videoInfo = videoData[index];
 
 					//애니메이션 도중 덜덜거림 방지용 timeout
-					setTimeout(function(){
+					setTimeout(function() {
 						// 데이터 업데이트
 						currentVideoSrc = videoInfo.id;  // 현재 비디오 src 업데이트
 						videoIframe.attr('src', 'https://www.youtube.com/embed/' + currentVideoSrc);
 						posterBx.css('background-image', 'url(' + videoInfo.poster + ')');
 						videoTitle.html(videoInfo.title);
 						videoDescription.html(videoInfo.description);
-					},1000)
+						
+						// 2.5초 후에 클릭 가능하도록 설정
+						setTimeout(() => {
+							canClick = true;
+						}, 1500);
+					}, 1000);
 				});
 
 				/*press kit door 애니메이션*/
@@ -290,6 +436,43 @@
 					else {
 						$('.section-press-kit .list-bx li').removeClass('active');
 						$(this).parent().toggleClass('active');
+					}
+				});
+
+				/*media gallery 슬라이드*/
+				var swiper = new Swiper(".section-media .swiper-container", {
+					slidesPerView: "auto",
+					speed: 1000,
+					loop: true,
+					loopedSlides: 3,
+					navigation: {
+						nextEl: ".section-media .slide-next",
+						prevEl: ".section-media .slide-prev",
+					},
+					pagination: {
+						el: ".section-media .swiper-pagination",
+						type: "fraction",
+					},
+				});
+
+				/*faq-list*/
+				$('.section-faq .question').on('click', function(){
+					if ($(this).hasClass('inactive')) return;
+
+					$(this).addClass('inactive'); // 비활성화 클래스 추가
+
+					setTimeout(() => {
+						$(this).removeClass('inactive'); // 0.3초 후에 비활성화 클래스 제거
+					}, 300);
+
+					if ($(this).hasClass('active')) {
+						$(this).removeClass('active');
+						$(this).next().slideUp();
+					} else {
+						$('.section-faq .question').removeClass('active');
+						$('.section-faq .list-bx li .answer').slideUp();	
+						$(this).addClass('active');
+						$(this).next().slideDown();
 					}
 				});
 
