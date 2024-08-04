@@ -6,21 +6,148 @@
 
 <header id="header" class="header">
 	<div class="container header-wrap">
-		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
-			<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+		<div class="flex-bx">
+			<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+			</a>
+			<div class="nav__bg"></div>
+			<!-- S : navigation -->
+			<nav class="nav">
+				<? include "../include/nav.html" ?>
+			</nav>
+		</div>
+		<a href="javascript:void(0)" class="buy-btn">
+			OUT NOW : Buy now on meta
 		</a>
-		<div class="nav__bg"></div>
-		<!-- S : navigation -->
-		<nav class="nav">
-			<? include "../include/nav.html" ?>
-		</nav>
 		<!-- E : navigation -->
 		<button class="nav-mobile__btn" type="button">
-			<i class="xi-bars"></i>
+			<i class="xi-bars text-white"></i>
+		</button>
+	</div>
+	<div class="lnb">
+		<div class="lnb-wrap">
+			<ul class="select-lang">
+				<li>
+					<a href="javascript:void(0)" class="active">
+						KO
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						EN
+					</a>
+				</li>
+			</ul>
+			<ul class="nav-list nav-list--depth1 anchor-list">
+				<!-- 1depth item -->
+				<!-- S : About-->
+				<li class="nav-list__item depth-1 item anchor-item">
+				  <? if ($P_dp0 != 'main'){?>
+				  <a href="../main/main.html#about" class="link">
+					<?=$nav_1?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_1.jpg" alt="About">
+					</div>
+				  </a>
+				  <?}else{?>
+				  <a class="link" data-scroll="about" href="#about">
+					<?=$nav_1?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_1.jpg" alt="About">
+					</div>
+				  </a>
+				  <?}?>
+				</li>
+				<!-- E : About-->
+				<!-- S : EPISODE-->
+				<li class="nav-list__item depth-1 item anchor-item">
+				  <? if ($P_dp0 != 'main'){?>
+				  <a href="../main/main.html#episode" class="link">
+					<?=$nav_2?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_2.jpg" alt="EPISODE">
+					</div>
+				  </a>
+				  <?}else{?>
+				  <a class="link" data-scroll="episode" href="#episode">
+					<?=$nav_2?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_2.jpg" alt="EPISODE">
+					</div>
+				  </a>
+				  <?}?>
+				</li>
+				<!-- E : EPISODE-->
+				<!-- S : NEWS-->
+				<li class="nav-list__item depth-1 item anchor-item">
+				  <? if ($P_dp0 != 'main'){?>
+				  <a href="../main/main.html#news" class="link">
+					<?=$nav_3?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_3.jpg" alt="NEWS">
+					</div>
+				  </a>
+				  <?}else{?>
+				  <a href="#news" data-scroll="news" class="link">
+					<?=$nav_3?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_3.jpg" alt="NEWS">
+					</div>
+				  </a>
+				  <?}?>
+				</li>
+				<!-- E : NEWS-->
+				<!-- S : PRESS KIT-->
+				<li class="nav-list__item depth-1 item anchor-item">
+				  <? if ($P_dp0 != 'main'){?>
+				  <a href="../main/main.html#presskit" class="link">
+					<?=$nav_4?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_4.jpg" alt="PRESS KIT">
+					</div>
+				  </a>
+				  <?}else{?>
+				  <a href="#presskit" data-scroll="presskit" class="link">
+					<?=$nav_4?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_4.jpg" alt="PRESS KIT">
+					</div>
+				  </a>
+				  <?}?>
+				</li>
+				<!-- E : PRESS KIT-->
+				<!-- S : SUPPORT-->
+				<li class="nav-list__item depth-1 item anchor-item">
+				  <? if ($P_dp0 != 'main'){?>
+				  <a href="../main/main.html#support" class="link">
+					<?=$nav_5?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_5.jpg" alt="SUPPORT">
+					</div>
+				  </a>
+				  <?}else{?>
+				  <a href="#support" data-scroll="support" class="link">
+					<?=$nav_5?>
+					<div class="img-bx">
+						<img src="../assets/images/main/lnb_5.jpg" alt="SUPPORT">
+					</div>	
+				  </a>
+				  <?}?>
+				</li>
+				<!-- E : SUPPORT-->
+				<li class="nav-list__item depth-1 d-none">
+				  <a href="<?=$nav_policy_href?>" class="link">
+					<?=$nav_policy?>
+				  </a>
+				</li>
+				<!-- 1depth item -->
+			</ul>
+		</div>
+		<button type="button" class="lnb-btn">
+			<img src="../assets/images/main/lnb_btn.svg" alt="버튼">
 		</button>
 	</div>
 </header>
-
 <!-- S : mobile navigation -->
 <? include "../include/aside.html" ?>
 <!-- E : mobile navigation -->
@@ -30,3 +157,26 @@
 	<img src="../assets/images/icon/loading.svg" alt="loading" />
 </div>
 <!-- E : loading image -->
+
+<script>
+	$(document).ready(function(){
+		checkScroll(); // 페이지가 로드될 때 스크롤 위치를 확인하고 클래스 추가
+
+		$(window).scroll(function(){
+			checkScroll(); // 스크롤 시에도 스크롤 위치를 확인하고 클래스 추가
+		});
+
+		function checkScroll() {
+			var curr = $(window).scrollTop();
+
+			if(curr > 50){
+			$('.header, .top-btn').addClass('scrolled');
+			} else {
+			$('.header, .top-btn').removeClass('scrolled');
+			}
+		}
+		$('.lnb-btn').on('click',function(){
+			$('.lnb').toggleClass('active');
+		});
+	})
+</script>

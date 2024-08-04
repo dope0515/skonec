@@ -69,3 +69,14 @@
 		</div>
 	</div>
 </footer>
+
+<button type="button" class="top-btn">
+	<img src="../assets/images/main/top_btn.svg" alt="탑버튼">
+</button>
+<script>
+	$(document).ready(function() {
+		$('.top-btn').click(function() {
+			$('html, body').animate({ scrollTop: 0 }, 'slow');
+		});
+	});
+</script>

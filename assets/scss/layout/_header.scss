@@ -2,13 +2,14 @@
 $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 
 .header {
-	border-bottom: 1px solid #ddd;
-	background-color: #fff;
 	width: 100%;
 	z-index: 500;
+	background-color: $black;
+	border-bottom: 1px solid $gray-6;
+	transition: all 0.4s;
 	@if ($header-fix == true) {
 		position: fixed;
-		top: 0;
+		top: -$nav-height;
 		left: 0;
 		@at-root html {
 			scroll-padding-top: $nav-height + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
@@ -18,25 +19,164 @@ $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 		@at-root html {
 			scroll-padding-top: $nav-height-lg + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
 		}
+		.logo {
+			width: 131px;
+		}
+	}
+	&.scrolled {
+		top: 0;
+		.lnb {
+			.lnb-btn {
+				margin-top: rem(100);
+			}
+		}
 	}
 
 	.header-wrap {
+		max-width: unset;
 		height: $nav-height;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding-left: rem(60);
+		padding-right: 0;
 		@include mdq-max(lg) {
 			height: $nav-height-lg;
 		}
-		.logo {
-			flex: 0 0 auto;
-			img {
-				width: em(140);
+		.flex-bx {
+			display: flex;
+			align-items: center;
+		}
+		.buy-btn {
+			font-family: 'RoadRage';
+			font-size: rem(36);
+			line-height: $nav-height;
+			color: $white;
+			background-color: $red;
+			text-align: center;
+			width: rem(341);
+			height: $nav-height;
+		}
+		@include mdq-max(xxl) {
+			padding-left: rem(20);
+		}
+		@include mdq-max(lg) {
+			.buy-btn {
+				height: 72px;
+				line-height: 72px;
+				transform: translateX(-50%);
+				position: fixed;
+				bottom: 0;
+				left: 50%;
 			}
 		}
 	}
 }
-
+.lnb {
+	display: flex;
+	align-items: flex-start;
+	position: fixed;
+	top: 0;
+	left: -246px;
+	z-index: 10;
+	transition: all 0.3s;
+	.lnb-wrap {
+		height: 100vh;
+		background-color: rgba($color: #000000, $alpha: 0.8);
+		padding: rem(45) rem(40);
+		.select-lang {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(20);
+			li {
+				a {
+					font-family: 'PostNoBills';
+					font-weight: 800;
+					font-size: rem(24);	
+					line-height: 1;
+					color: rgba($color: $white, $alpha: 0.5);
+					&.active {
+						color: $color-1;
+					}
+				}
+				& + li {
+					&::before {
+						content: '';
+						display: inline-block;
+						width: 1px;
+						height: rem(15);
+						background-color: rgba($color: $white, $alpha: 0.5);
+						margin: 0 rem(15) 0 rem(16);
+					}
+				}
+			}
+		}
+		.nav-list {
+			&::-webkit-scrollbar {
+				width: 2px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: $color-1;
+				border-radius: 7px;
+			}
+		
+			&::-webkit-scrollbar-track {
+				background-color: #eeeeee;
+				border-radius: 10px;
+			}
+			.depth-1 {
+				.link {
+					font-family: 'PostNoBills';
+					font-weight: 800;
+					color: $white;
+					font-size: rem(24);	
+					color: $white;
+					.img-bx {
+						border: 3px solid transparent;
+						transition: all 0.3s;
+					}
+					&.on {
+						.img-bx {
+							border-color: $color-2;
+						}
+					}
+				}
+				& + .depth-1 {
+					margin-top: rem(26);
+				}
+			}
+		}
+	}
+	.lnb-btn {
+		transition: all 0.4s;
+		img {
+			transform: rotate(180deg);
+			transition: all 0.3s;
+		}
+	}
+	&.active {
+		left: 0;
+		.lnb-btn {
+			img {
+				transform: rotate(0);
+				transition: all 0.3s;
+			}
+		}
+	}
+	
+	@media screen and (max-height: 910px) {
+		left: -248px;
+		.lnb-wrap {
+			.nav-list {
+				max-height: 80vh;
+				overflow: auto;
+			}
+		}
+	}
+	@include mdq-max(lg) {
+		display: none;
+	}
+}
 .main {
 	min-height: 65vh;
 }

@@ -142,6 +142,49 @@
 .section {
     &-visual {
         overflow: hidden;
+        position: relative;
+        @keyframes moveArrow {
+            0% {
+              opacity: 0;
+            }
+            30% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+        .scroll-down {
+            position: absolute;
+            bottom: rem(48);
+            right: rem(112);
+            z-index: 1;
+            .arrow {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: rem(12);
+                img {
+                    animation: moveArrow 4s infinite;
+                    opacity: 0;
+                    &:nth-child(1) {
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: 0.3s;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 0.6s;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 0.9s;
+                    }
+                    &:nth-child(5) {
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+        }
         .video-bx {
             width: 100%;
             height: 100vh;
@@ -272,7 +315,7 @@
                             padding-bottom: 56.25%;
                             border-left: rem(4) solid $color-2;
                             border-right: rem(4) solid $color-2;
-                            transition: padding 0.4s linear;
+                            transition: all 0.4s linear;
                             &::after {
                                 content: '';
                                 width: calc(100% + rem(10));
@@ -305,8 +348,9 @@
                                 width: 100%;
                                 height: 100%;
                                 position: absolute;
-                                top: 0;
-                                left: 0;
+                                transform: translate(-50%, -50%);
+                                top: 50%;
+                                left: 50%;
                             }
                         }
                         &::after {
@@ -654,7 +698,6 @@
                     top: 0;
                     left: 0;
                     padding-bottom: rem(68);
-                    background-color: rgba($color: #A61D21, $alpha: 0.5);
                     .txt {
                         font-size: rem(18);
                         color: $white;
@@ -691,7 +734,7 @@
     }
     &-media {
         background-image: url(../images/main/media_bg.png);
-        background-size: cover;
+        background-size: 100% 92%;
         background-repeat: no-repeat;
         position: relative;
         padding-top: rem(210);
@@ -717,11 +760,11 @@
                     transition: all 0.3s;
                     &.slide-prev {
                         background-image: url(../images/main/slide_prev.svg);
-                        left: rem(-38);
+                        left: -17%;
                     }
                     &.slide-next {
                         background-image: url(../images/main/slide_next.svg);
-                        right: rem(-38);
+                        right: -17%;
                     }
                     &:active {
                         background-color: $color-2;
@@ -1002,6 +1045,8 @@
     }
     .section {
         &-episode {
+            background-image: url(../images/main/episode_bg_m.png);
+            background-size: cover;
             .tab-bx {
                 .tab-body {
                     .inner {
@@ -1083,6 +1128,11 @@
         }
     }
     .section {
+        &-visual {
+            .scroll-down {
+                display: none;
+            }
+        }
         &-news {
             .human-img {
                 bottom: inherit;
@@ -1127,7 +1177,18 @@
 }
 @include mdq-max(md) {
     .section {
+        &-news {
+            .human-img {
+                width: 180px;
+                top: 19%;
+            }
+        }
         &-press-kit {
+            background-image: url(../images/main/press_kit_bg_m.png);
+            .doll-img {
+                width: 240px;
+                top: -55%;
+            }
             .list-bx {
                 display: block;
                 max-width: 300px;
@@ -1135,6 +1196,32 @@
                 margin-right: auto;
                 li {
                     width: 100%;
+                }
+            }
+        }
+        &-media {
+            background-image: none;
+        }
+        &-faq {
+            min-height: rem(800);
+            padding-bottom: rem(160);   
+            .list-bx {
+                li {
+                    padding: 0 rem(16);
+                    .question {
+                        display: block;
+                        .tit {
+                            margin-top: rem(16);
+                        }
+                    }
+                    .answer {
+                        .inner {
+                            display: block;
+                            .board-bx {
+                                margin-top: rem(16);
+                            }
+                        }
+                    }
                 }
             }
         }

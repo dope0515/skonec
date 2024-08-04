@@ -3,12 +3,22 @@
 // HEADER
 .header .nav {
 	text-align: center;
+	margin-left: rem(60);
+	@include mdq-max(xxl) {
+		margin-left: rem(20);
+	}
 	@include mdq-max(lg) {
 		display: none;
 	}
 	.nav-list--depth1 {
 		align-items: center;
 		display: flex;
+		align-items: center;
+		gap: rem(40);
+		
+	@include mdq-max(xxl) {
+		gap: rem(20);
+	}
 	}
 	.nav-list--depth2 {
 		padding: rem(30) rem(15);
@@ -25,39 +35,38 @@
 		position: relative;
 		> .link {
 			position: relative;
-			height: $nav-height;
-			padding: 0 em(30, 20);
 			display: flex;
 			align-items: center;
 			text-align: center;
-			color: #333;
-			font-size: em(20);
-			font-weight: 500;
+			font-family: 'PostNoBills';
+			font-weight: 800;
+			color: $white;
+			font-size: rem(24);	
 			line-height: 1.2;
+			letter-spacing: 0;
+			@include mdq-max(xxl) {
+				font-size: rem(20);
+			}
 			&::after {
 				content: '';
 				position: absolute;
 				left: 50%;
-				bottom: 0;
+				bottom: rem(-8);
 				width: 0;
-				height: 3px;
-				background: $color-1;
+				height: 2px;
+				background: $white;
 				transition: 0.3s;
 				display: block;
 			}
 
 			&:hover,
 			&.on {
-				color: $color-1;
-			}
-
-			&.on {
 				&::after {
 					width: 100%;
 					left: 0;
-				}
+				};
 			}
-		}
+			}
 
 		&.hover {
 			> .link::after {
@@ -83,7 +92,7 @@
 		}
 	}
 	&__bg {
-		display: none;
+		display: none !important;
 		position: absolute;
 		top: 100%; //$nav-height;
 		width: 100%;
@@ -131,10 +140,10 @@
 }
 
 // ASIDE
-$nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
+$nav-mobile-direction: left; //네비버튼 위치 , 네비 나오는 방향
 .nav-mobile {
 	z-index: 700;
-	background-color: #fff;
+	background-color: $black;
 	max-width: 600px;
 	width: 100%;
 	height: 100%;
@@ -150,7 +159,7 @@ $nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
 		#{$nav-mobile-direction}: 0;
 	}
 	&__btn {
-		#{$nav-mobile-direction}: 0;
+		right: 0;
 		top: 0;
 		position: absolute;
 		text-align: center;
@@ -178,12 +187,10 @@ $nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
 	&__head {
 		height: $nav-height-lg;
 		position: relative;
-		border-bottom: 1px solid #ddd;
-
 		.logo {
 			padding: 0 rem(20);
 			img {
-				width: rem(150);
+				width: 131px;
 			}
 		}
 
@@ -204,17 +211,25 @@ $nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
 
 	.depth-1 {
 		> .link {
+			font-family: 'PostNoBills';
+			font-weight: 800;
+			color: $white;
+			font-size: rem(24);	
 			text-align: left;
-			color: #000;
-			border-bottom: 1px solid #ddd;
+			color: $white;
 			display: block;
-			padding: 1rem 1rem;
-			font-size: 1.2rem;
+			padding: 1rem 20px;
 			position: relative;
-			&.active {
-				background-color: $color-1;
-				color: #fff;
+			text-decoration: underline;
+			text-underline-position: under;
+			text-decoration-thickness: 2px;
+			text-decoration-color: transparent;
+			transition: all 0.3s;
+			&:hover,
+			&.on {
+				text-decoration-color: $white;
 			}
+			
 		}
 	}
 	.depth-2 {

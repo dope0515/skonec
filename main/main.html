@@ -9,10 +9,22 @@
 		<link rel="stylesheet" href="../assets/css/main.min.css" />
 	</head>
 	<body class="main-body">
-
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
 		<main class="main" id="contents">
 			<!-- S : main-visual -->
-			<section class="section section-visual">
+			<section id="about" class="section section-visual">
+				<button type="button" class="scroll-down">
+					<img src="../assets/images/main/scroll_down.svg" alt="scroll down">
+					<div class="arrow">
+						<img src="../assets/images/icon/faq_arrow.svg" alt=">">
+						<img src="../assets/images/icon/faq_arrow.svg" alt=">">
+						<img src="../assets/images/icon/faq_arrow.svg" alt=">">
+						<img src="../assets/images/icon/faq_arrow.svg" alt=">">
+						<img src="../assets/images/icon/faq_arrow.svg" alt=">">
+					</div>
+				</button>
 				<div class="video-bx">
 					<!-- <div class="poster-img">
 						<img src="../assets/images/main/video_poster.jpg" alt="비디오 포스터 이미지">
@@ -90,7 +102,7 @@
 			</section>
 			<!-- E : Episode-->
 			<!-- S : News -->
-			<section class="section section-news">
+			<section id="news" class="section section-news">
 				<div class="human-img ani-effect">
 					<img src="../assets/images/main/news_bg.png" alt="사람얼굴">
 				</div>
@@ -129,7 +141,7 @@
 			</section>
 			<!-- E : News -->
 			<!-- S : presskit-->
-			<section class="section section-press-kit">
+			<section id="presskit" class="section section-press-kit">
 				<div class="doll-img ani-effect">
 					<img src="../assets/images/main/doll.png" alt="인형">
 				</div>
@@ -160,7 +172,7 @@
 								<div class="back"></div>
 							</button>
 							<div class="img-bx">
-								<img src="../assets/images/main/press_kit_1.jpg" alt="WALLPAPER">
+								<img src="../assets/images/main/press_kit_1.png" alt="WALLPAPER">
 							</div>
 							<div class="txt-bx">
 								<p class="tit"><span>WALLPAPER</span></p>
@@ -175,7 +187,7 @@
 								<div class="back"></div>
 							</button>
 							<div class="img-bx">
-								<img src="../assets/images/main/press_kit_2.jpg" alt="ASSETS">
+								<img src="../assets/images/main/press_kit_2.png" alt="ASSETS">
 							</div>
 							<div class="txt-bx">
 								<p class="tit"><span>ASSETS</span></p>
@@ -190,7 +202,7 @@
 								<div class="back"></div>
 							</button>
 							<div class="img-bx">
-								<img src="../assets/images/main/press_kit_3.jpg" alt="WALLPAPER">
+								<img src="../assets/images/main/press_kit_3.png" alt="WALLPAPER">
 							</div>
 							<div class="txt-bx">
 								<p class="tit"><span>LOGO</span></p>
@@ -203,12 +215,12 @@
 			</section>
 			<!-- E : presskit-->
 			<!-- S : media-->
-			<section class="section section-media">
+			<section id="support" class="section section-media">
 				<div class="container">
 					<!-- S : 섹션 타이틀-->
 					<div class="sec-tit">
 						<div class="tit-bx">
-							<h2 class="sub-tit" data-aos="fade-right">PRESS KIT</h2>
+							<h2 class="sub-tit" data-aos="fade-right">MEDIA GALLERY</h2>
 							<p class="tit" data-aos="fade-right" data-aos-delay="100">영상 갤러리</p>
 						</div>
 					</div>
@@ -239,7 +251,7 @@
 			</section>
 			<!-- E : media-->
 			<!-- S : Notice-->
-			<section class="section section-notice">
+			<section id="notice" class="section section-notice">
 				<div class="container">
 					<!-- S : 섹션 타이틀-->
 					<div class="sec-tit">
@@ -279,9 +291,9 @@
 			</section>
 			<!-- E : Notice-->
 			<!-- S : faq-->
-			<section class="section section-faq">
+			<section id="faq" class="section section-faq">
 				<div class="bg-bx ani-effect">
-					<img src="../assets/images/main/fag_bg.png" alt="배경 이미지">
+					<img src="../assets/images/main/faq_bg.png" alt="배경 이미지">
 				</div>
 				<div class="container">
 					<div class="sec-tit">
@@ -399,7 +411,7 @@
 
 					// 모든 버튼에서 'active' 클래스 제거
 					videoTabBtn.removeClass('active');
-
+					videoIframe.fadeOut();
 					// 클릭된 버튼에 'active' 클래스 추가
 					$(this).addClass('active');
 					$('.tab-body').addClass('animating');
@@ -419,12 +431,14 @@
 						posterBx.css('background-image', 'url(' + videoInfo.poster + ')');
 						videoTitle.html(videoInfo.title);
 						videoDescription.html(videoInfo.description);
-						
 						// 2.5초 후에 클릭 가능하도록 설정
 						setTimeout(() => {
 							canClick = true;
 						}, 1500);
 					}, 1000);
+					setTimeout(function(){
+						videoIframe.fadeIn();
+					},1900)
 				});
 
 				/*press kit door 애니메이션*/
@@ -507,6 +521,68 @@
 					}
 				});
 				})();
+
+				var link = $('.anchor-list a');
+				var linkM = $('.anchor-list-mobile a');
+
+				// Smooth scroll function
+				link.on('click', function (e) {
+					e.preventDefault();
+					var target = $(this).attr('href');
+					var targetPosition = $(target).offset().top; // Adjust the offset if needed
+
+					$('html, body').animate({
+						scrollTop: targetPosition
+					}, 500); // 500ms for smooth scroll
+				});
+
+				function findPosition() {
+					var lastActiveSection = null;
+
+					$('.section').each(function () {
+						if ($(this).offset().top - $(window).scrollTop() - 100 < 20) {
+							lastActiveSection = $(this).attr('id');
+						}
+					});
+
+					if (lastActiveSection) {
+						link.removeClass('on');
+						linkM.removeClass('on');
+						var targetId = lastActiveSection;
+
+						// If the last active section is below 'support', keep 'support' active
+						if (['notice', 'faq'].includes(targetId)) {
+							targetId = 'support';
+						}
+
+						$('.anchor-list')
+							.find('[data-scroll="' + targetId + '"]')
+							.addClass('on');
+					}
+				}
+
+				$(window).on('scroll', findPosition);
+				findPosition();
+				//모바일 nav 링크 클릭시 aside 초기화
+				$('.nav-mobile .depth-1 > .link').on('click', function () {
+					$('.nav-mobile').removeClass('active');
+					$('.nav-mobile__bg').fadeOut();
+				});
+				//헤더로고 클릭시 페이지 제일 상단으로 이동하기 (메인페이지에서만 기능)
+				let acting = false;
+				$('.header .logo').on('click', function () {
+					if (window.pageYOffset < 50 || acting) return;
+					acting = true;
+					$('html, body').animate({ scrollTop: 0 }, 600);
+					setTimeout(function(){
+						acting = false;
+					},600);
+				});
+				$('.scroll-down').click(function() {
+					$('html, body').animate({
+					scrollTop: $('#episode').offset().top
+					}, 'slow');
+				});
 			});
 		</script>
 	</body>

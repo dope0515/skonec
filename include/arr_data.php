@@ -23,18 +23,11 @@ $P_business_no = ""; // 사업자등록번호
 $P_sales_no = ""; // 통신판매업신고번호
 
 // 네비게이션 메뉴명
-$nav_1 = "Template";
-$nav_1_1 = "Template";
-$nav_1_2 = "Board List";
-$nav_1_3 = "Calendar";
-$nav_1_4 = "Location";
-$nav_1_5 = "Find Account";
-$nav_1_6 = "SNS Login";
-$nav_1_7 = "Hover Effects";
-// $nav_1_2 = "dp3-test";
-// $nav_1_2_1 = "Template";
-// $nav_1_2_2 = "dp3-test-bravo";
-// $nav_1_2_3 = "dp3-test-charlie";
+$nav_1 = "ABOUT";
+$nav_2 = "EPISODE";
+$nav_3 = "NEWS";
+$nav_4 = "PRESS KIT";
+$nav_5 = "SUPPORT";
 
 $nav_policy = "홈페이지 정책";
 $nav_policy_1 = "개인정보처리방침";
