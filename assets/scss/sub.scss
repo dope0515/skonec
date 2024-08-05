@@ -6,192 +6,111 @@
 // Mixins
 @import 'mixins';
 
-.section--01 {
-    padding: rem(157) 0 rem(266) 0;
+body {
+    background-color: $black;
+    padding-top: rem(182);
 }
-
-.section--02 {
-    padding: rem(51) 0 rem(314) 0;
-    border-top: 1px solid #979797;
+.main {
+    margin-top: rem(60);
 }
-
-.text--01 {
-    font-size: rem(28);
-    font-weight: 700;
-}
-
-.text--02 {
-    font-size: rem(20);
-    color: #666;
-}
-
-.text--03 {
-    font-size: rem(18);
-    color: #666;
-    font-weight: 500;
-}
-
-.select-bx {
-    width: 554px;
-    margin: 0 auto;
-
-    @include mdq-max(md) {
-        width: 100%;
+.sec-tit {
+    .des {
+        font-weight: 300;
+        font-size: rem(26);
+        color: $white;
+        letter-spacing: -0.03em;
     }
-
-    .sc-tit {
-        font-size: rem(42);
-        font-weight: 700;
-    }
-
-    ul {
-        margin-top: rem(111);
-
-        li {
-            height: rem(80);
+}
+.footer {
+    margin-top: rem(140);
+}
+.section {
+    &-press-kit {
+        .container {
+            max-width: 1480px;
+        }
+        .list-bx {
             display: flex;
-            align-items: center;
-            width: 100%;
-
-            p {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        .sel-tit {
-            &.bk-txt {
-                color: #3C1E1E;
-            }
-
-            &.w-txt {
-                color: $white;
-            }
-        }
-
-        .ye-list {
-            background: #F9E000;
-            padding: 0 rem(20);
-
-            a {
-                display: flex;
-                align-items: center;
-                gap: rem(83);
-            }
-
-            .icon-bx {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 60px;
-                height: 60px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: scale-down;
+            flex-wrap: wrap;
+            gap: rem(60) rem(40);
+            margin-top: rem(80);
+            li {
+                width: calc(100% / 2 - rem(20));
+                opacity: 0;
+                filter: blur(10px);
+                transition: all 1s;
+                a {
+                    display: block;
+                    border: 1px solid $gray-4;
+                    position: relative;
+                    overflow: hidden;
+                    .img-bx {
+                        display: block;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center center;
+                        transition: all 0.4s;
+                    }
+                    &::after {
+                        content: "";
+                        width: rem(50);
+                        height: rem(50);
+                        background-image: url(../images/sub/download_btn.jpg);
+                        background-repeat: no-repeat;
+                        background-size: rem(50);
+                        background-position: center center;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    @include mdq-min(lg) {
+                        &:hover {
+                            .img-bx {
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+                &.on {
+                    filter: blur(0);
+                    opacity: 1;
+                }
+                &:nth-child(even) {
+                    transition-delay: 0.2s;
                 }
             }
         }
+    }
+}
 
-        .pk-list {
-            background: #E11960;
-
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
+@include mdq-max(lg) {
+    body {
+        padding-top: rem(100);
+    }
+    .section {
+        &-press-kit {
+            .list-bx {
+                gap: rem(40) rem(20);
+                li {
+                    width: calc(100% / 2 - rem(10));
+                }
             }
         }
     }
-
-    .join-bx {
-        margin-top: rem(30);
-        text-align: center;
-
-        .pk-txt {
-            color: #E11960;
-            margin-top: rem(20);
-        }
-    }
 }
 
-.back-bx {
-    margin-bottom: rem(43);
-
-    i {
-        font-size: rem(50);
-    }
-}
-
-form {
-    width: 370px;
-    margin: 0 auto;
-    .pw-bx{
-        position: relative;
-    }
-
-    .form-item {
-        display: flex;
-    }
-    .eyes {
-        position: absolute;
-        top: 50%;
-        bottom: 0;
-        right: 10px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        i{
-            font-size: rem(20);
+@include mdq-max(sm) {
+    .section {
+        &-press-kit {
+            .list-bx {
+                gap: rem(60);
+                li {
+                    width: 100%;
+                    &:nth-child(even) {
+                        transition-delay: 0;
+                    }
+                }
+            }
         }
-    }
-    .auth_container{
-        display: none;
-    }
-    .msg{
-        font-size: rem(12);
-        padding-top: 8px;
-        margin: 0;
-        display: none;
-    }
-     /* 인증코드 입력창 + 유효 시간 */
-     .input_container{
-        position: relative;
-        display: inline-block;
-    }
-
-    /* 유효시간 타이머 설정 */
-    .timer{
-        position: absolute;
-        right: 16px;
-        top:16px;
-    }
-
-    /* 인증코드를 받지 못하셨나요?  [인증코드 재발송] */
-    .ReRFCBox{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    
-    /* 버튼 공통 설정 */
-    button{
-        height:55px;
-    }
-
-    /* 이메일을 잘못 입력하셨나요?, 인증코드를 받지 못하셨나요? 메세지 */
-    .misspell_box span, .ReRFCBox > span{
-        align-self :center;
-    }
-
-    /* 이메일 변경, 인증코드 재발송 */
-    .misspell_box > button, .ReRFCBox > button{
-        background-color: transparent;
-        border: 0;
-        outline: 0;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        height: fit-content;
     }
 }

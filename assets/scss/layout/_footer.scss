@@ -74,6 +74,7 @@
 	}
 }
 .top-btn {
+	background-color: $gray-3;
 	position: fixed;
 	right: rem(40);
 	bottom: rem(-80);
@@ -101,6 +102,15 @@
 					width: 100%;
 				}
 			}
+		}
+	}
+	.top-btn {
+		width: rem(42);
+		height: rem(42);
+		right: rem(10);
+		bottom: rem(-80);
+		&.scrolled {
+			bottom: rem(10);
 		}
 	}
 }

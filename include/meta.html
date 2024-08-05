@@ -58,7 +58,12 @@
 <link rel="stylesheet" href="../assets/fonts/icons/bootstrap/bootstrap-icons.min.css" />
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="../assets/css/common.min.css" />
+<link rel="stylesheet" href="../assets/css/common.min.css?v=1.0" />
+<? if ($P_dp0 == main) {?>
+	<link rel="stylesheet" href="../assets/css/main.min.css?v=1.0" />
+<?}else{?>
+	<link rel="stylesheet" href="../assets/css/sub.min.css?v=1.0" />
+<?}?>
 
 <!-- Load jQuery -->
 <!-- <script src="../assets/js/lib/jquery-1.7.1.min.js"></script> -->

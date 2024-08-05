@@ -1,5 +1,12 @@
-<div class="sub-visual" style="background-image: url(../assets/images/sub/visual_<?=$P_dp1?>.jpg)">
+<div class="sub-visual">
 	<div class="sub-visual__wrapper container">
-		<h1 class="sub-visual__title"><?=${nav_.$P_dp1}?></h1>
+		<strong class="sub-visual__title ani-effect">Press kit</strong>
+	</div>
+	<div class="img-bx" data-aos="fade-in" data-aos-delay="200">
+		<picture>
+			<source media="(min-width: 768px)" srcset="../assets/images/sub/visual_<?=$P_dp1?>.jpg">
+			<source media="(min-width: 0px)" srcset="../assets/images/sub/visual_<?=$P_dp1?>_m.jpg">
+			<img src="" alt="서브비주얼 이미지">
+		</picture>
 	</div>
 </div>
