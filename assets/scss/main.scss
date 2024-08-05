@@ -121,6 +121,11 @@
         background-size: 100% 100%;
         margin-top: rem(28);
     }
+    &.eng {
+        .tit {
+            font-size: rem(48);
+        }
+    }
 }
 .section {
     &-visual {
@@ -678,6 +683,7 @@
                     width: 100%;
                     height: 100%;
                     position: absolute;
+                    padding: 0 rem(10);
                     top: 0;
                     left: 0;
                     padding-bottom: rem(68);
@@ -839,10 +845,25 @@
         }
     }
     &-notice {
-        padding-top: rem(225);
+        padding-top: rem(153);
+        position: relative;
+        .watch {
+            position: absolute;
+            left: -64px;
+            top: -10%;
+            filter: blur(10px);
+            opacity: 0;
+            transition: all 1s;
+            &.on {
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
         .list-bx {
             display: flex;
             gap: rem(60);
+            position: relative;
+            z-index: 2;
             li {
                 width: calc(100% / 3 - rem(40));
                 a {
@@ -920,6 +941,19 @@
         position: relative;
         margin-top: rem(140);
         padding-bottom: rem(200);
+        .anubis {
+            position: absolute;
+            right: 0;
+            top: -32%;
+            z-index: 1;
+            filter: blur(10px);
+            opacity: 0;
+            transition: all 1s;
+            &.on {
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
         .bg-bx {
             width: 100%;
             height: 100%;
@@ -1012,7 +1046,20 @@
         }
     }
 }
-
+@include mdq-max(xxxl) {
+    .section {
+        &-notice {
+            .watch {
+                display: none;
+            }
+        }
+        &-faq {
+            .anubis {
+                display: none;
+            }
+        }
+    }
+}
 @include mdq-max(xl) {
     .sec-tit {
         margin-bottom: rem(70);
@@ -1159,7 +1206,24 @@
     }
 }
 @include mdq-max(md) {
+    .sec-tit {
+        &.eng {
+            .tit,
+            .des {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
     .section {
+        &-episode {
+            .tab-bx {
+                .tab-head {
+                    padding: 0;
+                }
+            }
+        }
         &-news {
             .human-img {
                 width: 180px;

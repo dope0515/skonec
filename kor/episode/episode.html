@@ -1,0 +1,53 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '2';
+    include "../include/meta.html"
+		?>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+    <!-- S : Main -->
+    <main class="main" id="contents">
+      <!-- S : Section -->
+      <section class="section section-press-kit">
+        <div class="container">
+          <!-- S : 섹션 타이틀-->
+          <div class="sec-tit">
+            <p class="des" data-aos="fade-right">
+              최신 게임 자료, 스크린샷, 로고 및 홍보용 이미지를 확인하고, 여러분의 콘텐츠에 활용해보세요. <br>리소스를 활용하여 더욱 풍부한 콘텐츠를 제작할 수 있습니다.
+            </p>
+          </div>
+          <!-- E : 섹션 타이틀-->
+          <!-- S : 다운로드 리스트-->
+          <ul class="list-bx">
+            <? for($i=1; $i < 10; $i++) {?>
+            <li class="ani-effect">
+              <a href="javascript:void(0)" download>
+                <picture class="img-bx" style="background-image: url(../../assets/images/sub/download_img_<?=$i?>.jpg);">
+                  <source media="(min-width: 768px)" srcset="../../assets/images/base_700x400.png">
+                  <source media="(min-width: 0px)" srcset="../../assets/images/base_576x702.png">
+                  <img src="" alt="썸네일 이미지" loading="lazy">
+                </picture>
+              </a>
+            </li>
+            <?}?>
+          </ul>
+          <!-- E : 다운로드 리스트-->
+        </div>
+      </section>
+      <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

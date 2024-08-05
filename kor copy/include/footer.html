@@ -1,0 +1,82 @@
+<footer id="footer" class="footer">
+	<div class="container">
+		<div class="footer-wrap">
+			<div class="bx-1">
+				<div class="footer-logo">
+					<img src="../../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+				</div>
+				<div class="footer-info">
+					<strong class="company">
+						Skonec Entertainment
+					</strong>
+					<ul class="info-list">
+						<li>
+							<span class="tit">TEL</span>
+							<span class="des"><?=$SS[sitetel]?></span>
+						</li>
+						<li>
+							<span class="tit"><?=$SS[AddTitle1]?></span>
+							<span class="des"><?=$SS[AddValue1]?></span>
+						</li>
+						<li>
+							<span class="tit"><?=$SS[AddTitle2]?></span>
+							<span class="des"><?=$SS[AddValue2]?></span>
+						</li>
+					</ul>
+					<p class="footer-copyright mt-4">
+						<?=$SS[sitecopyright]?>
+					</p>
+				</div>
+			</div>
+			<div class="bx-2">
+				<ul class="policy-list">
+					<li>
+						<a href="../pop/privacy-popup.html" class="popup-link">Privacy Policy</a>
+					</li>
+					<li>
+						<!--클릭시 고객사에서 등록한 이메일 보내기 자동실행-->
+						<button type="button">CONTACT US</button>
+					</li>
+				</ul>
+				<ul class="icon-list">
+					<li>
+						<a href="https://www.facebook.com/skonecvr" target="_blank">
+							<img src="../../assets/images/icon/icon_facebook.svg" alt="페이스북">
+						</a>
+					</li>
+					<li>
+						<a href="https://x.com/Skonecxr/status/1763071662474571959" target="_blank">
+							<img src="../../assets/images/icon/icon_x.svg" alt="트위터">
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="../../assets/images/icon/icon_instagram.svg" alt="인스타그램">
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="../../assets/images/icon/icon_discord.svg" alt="디스코드">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/@skonecent" target="_blank">
+							<img src="../../assets/images/icon/icon_youtube.svg" alt="유튜브">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<button type="button" class="top-btn">
+	<img src="../../assets/images/main/top_btn.svg" alt="탑버튼">
+</button>
+<script>
+	$(document).ready(function() {
+		$('.top-btn').click(function() {
+			$('html, body').animate({ scrollTop: 0 }, 'slow');
+		});
+	});
+</script>

@@ -1,0 +1,74 @@
+<ul class="nav-list nav-list--depth1 anchor-list">
+  <!-- 1depth item -->
+  <!-- S : About-->
+  <li class="nav-list__item depth-1 item anchor-item">
+    <? if ($P_dp0 != 'main'){?>
+    <a href="../main/main.html#about" class="link">
+      <?=$nav_1?>
+    </a>
+    <?}else{?>
+    <a class="link" data-scroll="about" href="#about">
+      <?=$nav_1?>
+    </a>
+    <?}?>
+  </li>
+  <!-- E : About-->
+  <!-- S : EPISODE-->
+  <li class="nav-list__item depth-1 item anchor-item">
+    <? if ($P_dp0 != 'main'){?>
+    <a href="../main/main.html#episode" class="link">
+      <?=$nav_2?>
+    </a>
+    <?}else{?>
+    <a class="link" data-scroll="episode" href="#episode">
+      <?=$nav_2?>
+    </a>
+    <?}?>
+  </li>
+  <!-- E : EPISODE-->
+  <!-- S : NEWS-->
+  <li class="nav-list__item depth-1 item anchor-item">
+    <? if ($P_dp0 != 'main'){?>
+    <a href="../main/main.html#news" class="link">
+      <?=$nav_3?>
+    </a>
+    <?}else{?>
+    <a href="#news" data-scroll="news" class="link">
+      <?=$nav_3?>
+    </a>
+    <?}?>
+  </li>
+  <!-- E : NEWS-->
+  <!-- S : PRESS KIT-->
+  <li class="nav-list__item depth-1 item anchor-item">
+    <? if ($P_dp0 != 'main'){?>
+    <a href="../main/main.html#presskit" class="link">
+      <?=$nav_4?>
+    </a>
+    <?}else{?>
+    <a href="#presskit" data-scroll="presskit" class="link">
+      <?=$nav_4?>
+    </a>
+    <?}?>
+  </li>
+  <!-- E : PRESS KIT-->
+  <!-- S : SUPPORT-->
+  <li class="nav-list__item depth-1 item anchor-item">
+    <? if ($P_dp0 != 'main'){?>
+    <a href="../main/main.html#support" class="link">
+      <?=$nav_5?>
+    </a>
+    <?}else{?>
+    <a href="#support" data-scroll="support" class="link">
+      <?=$nav_5?>
+    </a>
+    <?}?>
+  </li>
+  <!-- E : SUPPORT-->
+  <li class="nav-list__item depth-1 d-none">
+    <a href="<?=$nav_policy_href?>" class="link">
+      <?=$nav_policy?>
+    </a>
+  </li>
+  <!-- 1depth item -->
+</ul>
