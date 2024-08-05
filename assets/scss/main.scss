@@ -341,6 +341,17 @@
                                 left: 50%;
                             }
                         }
+                        .video-poster {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 2;
+                            opacity: 1;
+                            transition: 0.4s;
+                            img {
+                                display: none;
+                            }
+                        }
                         &::after {
                             content: '';
                             width: 50%;
@@ -457,6 +468,9 @@
                                         opacity: 0;
                                     }
                                 }
+                            }
+                            .video-poster {
+                                opacity: 0;
                             }
                         }
                         .poster-bx {

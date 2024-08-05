@@ -147,6 +147,9 @@
 			<img src="../../assets/images/main/lnb_btn.svg" alt="버튼">
 		</button>
 	</div>
+	<a href="../main/main.html" class="logo-right" title="메인으로">
+		<img src="../../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+	</a>
 </header>
 <!-- S : mobile navigation -->
 <? include "../include/aside.html" ?>
@@ -160,21 +163,6 @@
 
 <script>
 	$(document).ready(function(){
-		checkScroll(); // 페이지가 로드될 때 스크롤 위치를 확인하고 클래스 추가
-
-		$(window).scroll(function(){
-			checkScroll(); // 스크롤 시에도 스크롤 위치를 확인하고 클래스 추가
-		});
-
-		function checkScroll() {
-			var curr = $(window).scrollTop();
-
-			if(curr > 50){
-			$('.header, .top-btn').addClass('scrolled');
-			} else {
-			$('.header, .top-btn').removeClass('scrolled');
-			}
-		}
 		$('.lnb-btn').on('click',function(){
 			$('.lnb').toggleClass('active');
 		});

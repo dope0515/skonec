@@ -79,6 +79,9 @@
 									<!-- S : 동영상 박스-->
 									<div class="video-bx">
 										<iframe id="videoIframe" src="https://www.youtube.com/embed/QSuockCwFDw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+										<div class="video-poster">
+											<img id="videoPoster" src="" alt="비디오 포스터" loading="lazy">
+										</div>
 									</div>
 									<!-- E : 동영상 박스-->
 								</div>
@@ -109,7 +112,7 @@
 					<div class="sec-tit">
 						<div class="tit-bx">
 							<h2 class="sub-tit" data-aos="fade-right">NEWS</h2>
-							<p class="tit" data-aos="fade-right" data-aos-delay="100">최신소식</p>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">어나더도어의 최신소식</p>
 						</div>
 					</div>
 					<ul class="list-bx">
@@ -149,7 +152,7 @@
 					<div class="sec-tit">
 						<div class="tit-bx">
 							<h2 class="sub-tit" data-aos="fade-right">PRESS KIT</h2>
-							<p class="tit" data-aos="fade-right" data-aos-delay="100">미디어 리소스</p>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">더욱 풍부한 컨텐츠</p>
 						</div>
 						<p class="des" data-aos="fade-left">
 							최신 게임 자료, 스크린샷, 로고 및 홍보용 이미지를 확인하고, <br>
@@ -173,10 +176,10 @@
 							<div class="img-bx">
 								<img src="../../assets/images/main/press_kit_1.png" alt="WALLPAPER">
 							</div>
-							<div class="txt-bx">
+							<a href="../episode/episode.html#contents" class="txt-bx">
 								<p class="tit"><span>WALLPAPER</span></p>
 								<p class="txt">어나더도어의 멋진 배경화면을 다운로드하여 데스크탑과 모바일을 꾸며보세요.</p>
-							</div>
+							</a>
 						</li>
 						<li class="ani-effect">
 							<button type="button" class="door">
@@ -188,10 +191,10 @@
 							<div class="img-bx">
 								<img src="../../assets/images/main/press_kit_2.png" alt="ASSETS">
 							</div>
-							<div class="txt-bx">
+							<a href="../episode/episode.html#contents" class="txt-bx">
 								<p class="tit"><span>ASSETS</span></p>
 								<p class="txt">게임 속 다양한 캐릭터 이미지와<br> 일러스트를 만나보세요.<br> 각 캐릭터의 개성을 담은<br> 고화질 이미지를 제공합니다.</p>
-							</div>
+							</a>
 						</li>
 						<li class="ani-effect">
 							<button type="button" class="door">
@@ -203,10 +206,10 @@
 							<div class="img-bx">
 								<img src="../../assets/images/main/press_kit_3.png" alt="WALLPAPER">
 							</div>
-							<div class="txt-bx">
+							<a href="../episode/episode.html#contents" class="txt-bx">
 								<p class="tit"><span>LOGO</span></p>
 								<p class="txt">스코넥의 게임 로고를 확인하고 다운로드하세요. 리뷰와 콘텐츠 제작 시 활용할 수 있습니다.</p>
-							</div>
+							</a>
 						</li>
 					</ul>
 					<!-- E : 리스트 영역-->
@@ -220,7 +223,7 @@
 					<div class="sec-tit">
 						<div class="tit-bx">
 							<h2 class="sub-tit" data-aos="fade-right">MEDIA GALLERY</h2>
-							<p class="tit" data-aos="fade-right" data-aos-delay="100">영상 갤러리</p>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">생생한 에피소드</p>
 						</div>
 					</div>
 					<!-- E : 섹션 타이틀-->
@@ -259,7 +262,7 @@
 					<div class="sec-tit">
 						<div class="tit-bx">
 							<h2 class="sub-tit" data-aos="fade-right">NOTICE</h2>
-							<p class="tit" data-aos="fade-right" data-aos-delay="100">게임의 최신 소식을 <br>만나보세요</p>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">게임 트렌드 이야기</p>
 						</div>
 						<p class="des mt-15" data-aos="fade-left">
 							우리 게임의 최신 소식과 업데이트를 확인하세요! <br>
@@ -304,7 +307,8 @@
 					<div class="sec-tit">
 						<div class="tit-bx">
 							<h2 class="sub-tit" data-aos="fade-right">FAQ</h2>
-							<p class="tit" data-aos="fade-right" data-aos-delay="100">자주 묻는 질문</p>
+							<p class="tit" data-aos="fade-right" data-aos-delay="100">무엇이든 물어보세요.
+							</p>
 						</div>
 					</div>
 					<ul class="list-bx">
@@ -364,38 +368,44 @@
 					{
 						id: "QSuockCwFDw",
 						poster: "../../assets/images/main/poster_1.jpg",
+						videoposter: "",
 						title: "Jacob’s Prison",
 						description: "제이콥 박사는 딸을 살리기 위해 사람들을 납치해서 감옥에 가둔 후 실험에 이용한다. 박사가 설치해 놓은 몇 가지 트릭을 풀면 감옥을 나갈 수 있다!<br> 삶에 대한 의지를 보여라, 마지막 기회마저 놓친다면 당신은 실험에 이용되고 처참히 버려질 것이다."
 					},
 					{
 						id: "QSuockCwFDw",
-						poster: "../../assets/images/main/poster_1.jpg",
-						title: "제목2",
-						description: "내용2"
+						poster: "../../assets/images/main/poster_2.jpg",
+						videoposter: "../../assets/images/main/video_poster_2.jpg",
+						title: "Dolls Room",
+						description: "에이미는 불치병에 걸려 이미 죽었다. 제이콥은 에이미의 죽음을 인정하지 못하고 실험을 하는 것이다. 에이미의 영혼은 천상으로 떠나야 하지만 그럴 수 없다. 아빠를 홀로 남겨 두기 싫었기 때문이다. 또 다른 이유는 어린 나이에 너무 많은 고통을 받았기 때문이다. 에이미 마음의 문은 굳게 닫히고 그 모든 것이 아빠와의 추억이 있는 집에 투영된다. 마음이 닫혀버린 에이미의 영혼은 두가지 모습으로 나타난다. 선량한 아이의 모습과 사악한 악마의 모습으로… 스스로 굳게 잠겨버린 자신의 마음을 열 수 없는 에이미는 다른 사람에게 도움을 받기로 결심한다. 행인을 유인해 자신의 마음이 투영된 집의 자물쇠를 열어 주기를 바란다. "
 					},
 					{
 						id: "QSuockCwFDw",
-						poster: "../../assets/images/main/poster_1.jpg",
-						title: "제목3",
-						description: "내용3"
+						poster: "../../assets/images/main/poster_3.jpg",
+						videoposter: "../../assets/images/main/video_poster_3.jpg",
+						title: "Secret Lab",
+						description: "에이미의 치료를 명분으로 사람들을 납치, 실험하는 것을 제이콥에게 권유했다. 비도덕적인 것임을 알지만, 사랑하는 박사가 괴로워 하는 모습을 지켜볼 수 없었다. 많은 사람을 실험에 이용하고 희생시켰지만 결과는 좋지 않았다. 사랑하는 사람을 모두 잃은 클라라는 자제력을 잃고 다른 인격이 나타난다. 그녀의 이중인격이 나타나며 더 많은 사람들을 희생시킨다. 결국 클라라의 실험은 목적이 없는 살인 그 자체를 즐기고 있었다. 누군가가 연구실을 탈출해서 기폭장치를 눌러야만 그녀의 폭주를 막을 수 있다. 다행이 자신이 다른 인격에게 지배 당할 것을 예상하고 연구실을 없앨 수 있는 방법을 만들어 놓았다. 연구실을 폭파시키고 살인을 멈추기 위해선 갇혀있는 사람들의 도움이 필요하다."
 					},
 					{
 						id: "QSuockCwFDw",
-						poster: "../../assets/images/main/poster_1.jpg",
-						title: "제목4",
-						description: "내용4"
+						poster: "../../assets/images/main/poster_4.jpg",
+						videoposter: "../../assets/images/main/video_poster_4.jpg",
+						title: "Pharaoh’s Curse",
+						description: "첫 장만 봐도 우주의 진리를 깨우칠 수 있고, 영원한 불로장생을 할 수 있다고 전해지는 고대 유물 “ 에메랄드 서 ”<br> 그 유물은 피라미드에 몇 천 년의 역사 속에 그대로 남아 있었다. 플레이어(고고학자)는 에메랄드 서를 찾으러 피라미드 꼭대기에 올랐다.<br> 에메랄드 서를 만지는 순간 고대인들이 만들어 놓은 트릭이 발동한다. 플레이어는 피라미드 안에 갇히게 되고 트릭을 해결하여 이곳을 탈출하고 에메랄드 서를 얻어야 한다. "
 					},
 					{
 						id: "QSuockCwFDw",
-						poster: "../../assets/images/main/poster_1.jpg",
-						title: "제목5",
-						description: "내용5"
+						poster: "../../assets/images/main/poster_5.jpg",
+						videoposter: "../../assets/images/main/video_poster_5.jpg",
+						title: "Altar of Sun",
+						description: "고대 마야인들인 천문학에 탁월한 능력을 발휘했다. 그들만의 법칙으로 달력을 만들었는데 그 이름은 “졸킨”<br> 그 소문은 바로 ＂달력 시간을 맞추어 미래를 볼 수 있다＂는 것이다. 소문에 대한 호기심은 많은 고고학자와 탐험가의 발길을 이끌었다. 태양의 제단을 찾아 나선 사람들은 두 가지 결과를 가지고 왔다. 그 장소를 찾지 못한 사람들과 행방불명이 된 사람들… 정부는 사람들의 실종을 막기 위해서 해당 지역을 탐사할 것을 금지하지만, 사람들의 호기심을 막을 수는 없다 오늘도 여러 사람들은 밀림 깊은 안개 속, 피의 제단을 찾아 나선다."
 					}
 				];
 
 				const videoTabBtn = $('.section-episode .tab-bx .tab-head li button');
 				const videoIframe = $('#videoIframe');
 				const videoThumb = $('#videoThumb');
+				const videoPoster = $('#videoPoster');
 				const posterBx = $('#posterBx');
 				const videoTitle = $('#videoTitle');
 				const videoDescription = $('#videoDescription');
@@ -417,6 +427,7 @@
 					// 모든 버튼에서 'active' 클래스 제거
 					videoTabBtn.removeClass('active');
 					videoIframe.fadeOut();
+					videoPoster.fadeOut();
 					// 클릭된 버튼에 'active' 클래스 추가
 					$(this).addClass('active');
 					$('.tab-body').addClass('animating');
@@ -434,6 +445,7 @@
 						currentVideoSrc = videoInfo.id;  // 현재 비디오 src 업데이트
 						videoIframe.attr('src', 'https://www.youtube.com/embed/' + currentVideoSrc);
 						posterBx.css('background-image', 'url(' + videoInfo.poster + ')');
+						videoPoster.attr('src', videoInfo.videoposter || ''); // 비디오 포스터가 없는 경우 src를 빈 문자열로 설정
 						videoTitle.html(videoInfo.title);
 						videoDescription.html(videoInfo.description);
 						// 2.5초 후에 클릭 가능하도록 설정
@@ -441,9 +453,12 @@
 							canClick = true;
 						}, 1500);
 					}, 1000);
-					setTimeout(function(){
+					setTimeout(function() {
 						videoIframe.fadeIn();
-					},1900)
+						if (videoInfo.videoposter) { // videoposter가 있을 경우에만 fadeIn
+							videoPoster.fadeIn();
+						}
+					}, 1900)
 				});
 
 				/*press kit door 애니메이션*/
@@ -560,6 +575,23 @@
 						scrollTop: $('#episode').offset().top
 					}, 'slow');
 				});
+
+				checkScroll(); // 페이지가 로드될 때 스크롤 위치를 확인하고 클래스 추가
+
+				$(window).scroll(function(){
+					checkScroll(); // 스크롤 시에도 스크롤 위치를 확인하고 클래스 추가
+				});
+
+				function checkScroll() {
+					var curr = $(window).scrollTop();
+					var episodeOffset = $('#episode').offset().top;
+					
+					if(curr > episodeOffset){
+						$('.header, .top-btn').addClass('scrolled');
+					} else {
+						$('.header, .top-btn').removeClass('scrolled');
+					}
+				}
 			});
 		</script>
 	</body>
