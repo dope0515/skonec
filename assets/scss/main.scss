@@ -1242,6 +1242,18 @@
         }
     }
     .section {
+        &-visual {
+            .video-bx {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                video {
+                    height: auto;
+                    position: unset;
+                    transform: unset;
+                }
+            }
+        }
         &-episode {
             .tab-bx {
                 .tab-head {
