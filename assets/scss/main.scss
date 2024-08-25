@@ -364,7 +364,7 @@
                             left: 0;
                             top: 50%;
                             z-index: 1;
-                            transition: all 2.5s;
+                            transition: all 1.2s cubic-bezier(0.330, 0.575, 0.705, 0.295);
                             transition-delay: 1.3s;
                         }
                         &::before {
@@ -379,7 +379,7 @@
                             right: 0;
                             top: 50%;
                             z-index: 1;
-                            transition: all 2.5s;
+                            transition: all 1.2s cubic-bezier(0.330, 0.575, 0.705, 0.295);
                             transition-delay: 1.3s;
                         }
                     }
@@ -433,10 +433,10 @@
                             animation: vibrate-1 0.3s linear 1 both;
                             animation-delay: 0.6s;
                             &::after {
-                                left: -100%;
+                                left: -50%;
                             }
                             &::before {
-                                right: -100%;
+                                right: -50%;
                             }
                         }
                         .poster-bx {
@@ -453,7 +453,7 @@
                         }
                         .des {
                             filter: blur(0);
-                            opacity: 1;
+                            opacity: 0.7;
                             visibility: visible;
                         }
                     }
@@ -753,6 +753,7 @@
                     width: rem(45);
                     height: rem(45);
                     border: 1px solid rgba($color: $color-2, $alpha: 0.3);
+                    background-color: $color-2;
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: rem(9.4);
@@ -762,15 +763,15 @@
                     z-index: 2;
                     transition: all 0.3s;
                     &.slide-prev {
-                        background-image: url(../images/main/slide_prev.svg);
+                        background-image: url(../images/main/slide_prev_active.svg);
                         left: -17%;
                     }
                     &.slide-next {
-                        background-image: url(../images/main/slide_next.svg);
+                        background-image: url(../images/main/slide_next_active.svg);
                         right: -17%;
                     }
                     &:active {
-                        background-color: $color-2;
+                        background-color: #a5834e;
                         &.slide-prev {
                             background-image: url(../images/main/slide_prev_active.svg);
                         }
@@ -780,7 +781,7 @@
                     }
                     @include mdq-min(lg) {
                         &:hover {
-                            background-color: $color-2;
+                            background-color: #a5834e;
                             &.slide-prev {
                                 background-image: url(../images/main/slide_prev_active.svg);
                             }
@@ -802,6 +803,11 @@
                     justify-content: center;
                     border: 2px solid $color-2;
                     transition: all 0.8s;
+                    .img-bx {
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                    }
                     &.swiper-slide-active {
                         transform: scale(1.255);
                         border-width: 3px;
@@ -953,7 +959,7 @@
     &-faq {
         min-height: rem(1076);
         position: relative;
-        margin-top: rem(140);
+        padding-top: rem(140);
         padding-bottom: rem(200);
         .anubis {
             position: absolute;
@@ -972,7 +978,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            top: 0;
+            top: rem(140);
             left: 0;
             background-color: $black;
             opacity: 0;
@@ -1045,6 +1051,10 @@
                     }
                     .board-bx {
                         width: calc(100% - rem(60));
+                        font-weight: 300;
+                        font-size: rem(18);
+                        color: $white;
+                        letter-spacing: -0.03em;
                         * {
                             font-weight: 300;
                             font-size: rem(18);
@@ -1145,6 +1155,7 @@
                     position: absolute;
                     bottom: rem(-45);
                     left: 0;
+                    z-index: 2;
                     .slide-btn {
                         position: static;
                         transform: translateY(0);
@@ -1236,6 +1247,15 @@
                 .tab-head {
                     padding: 0;
                 }
+                .tab-body {
+                    .txt-bx {
+                        .des {
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
         }
         &-news {
@@ -1262,6 +1282,9 @@
         }
         &-media {
             background-image: none;
+            .slide-bx {
+                margin-top: rem(40);
+            }
         }
         &-faq {
             min-height: rem(800);

@@ -586,7 +586,7 @@
 					var curr = $(window).scrollTop();
 					var episodeOffset = $('#episode').offset().top;
 					
-					if(curr > episodeOffset){
+					if(curr > episodeOffset - 20){
 						$('.header, .top-btn').addClass('scrolled');
 					} else {
 						$('.header, .top-btn').removeClass('scrolled');

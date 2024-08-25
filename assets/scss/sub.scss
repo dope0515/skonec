@@ -27,16 +27,69 @@ body {
 .footer {
     margin-top: rem(140);
 }
+/*sweet alert*/
+.swal2-popup {
+    width: min(100%, 518px);
+}
+.swal2-html-container {
+    border-bottom: 1px solid #dddddd;
+    margin: 0 rem(20);
+    padding: rem(50) 0;
+}
+.swal2-styled.swal2-confirm {
+    background-color: $white;
+    border: 0;
+    font-weight: 600;
+    font-size: rem(22);
+    color: $black;
+    outline: 0;
+    transition: all 0.3s;
+    padding: rem(5) rem(20);
+    &:focus {
+        box-shadow: none;
+    }
+    &:hover {
+        color: $white;
+        background-image: none;
+        background-color: #dddddd;
+    }
+}   
 .section {
     &-press-kit {
         .container {
             max-width: 1480px;
         }
+        .category-list {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(20);
+            margin-top: rem(40);
+            li {
+                button {
+                    min-width: rem(243);
+                    height: rem(76);
+                    font-family: 'PostNoBills';
+                    font-weight: 800;
+                    font-size: rem(22);
+                    text-align: center;
+                    color: $white;
+                    background-image: url(../images/main/btn_gray.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    transition: all 0.3s;
+                    &.active,
+                    &:hover {
+                        background-image: url(../images/main/btn_red.png);
+                    }
+                }
+            }
+        }
         .list-bx {
             display: flex;
             flex-wrap: wrap;
             gap: rem(60) rem(40);
-            margin-top: rem(80);
             li {
                 width: calc(100% / 2 - rem(20));
                 opacity: 0;
@@ -50,7 +103,7 @@ body {
                     .img-bx {
                         display: block;
                         background-repeat: no-repeat;
-                        background-size: cover;
+                        background-size: contain;
                         background-position: center center;
                         transition: all 0.4s;
                     }
@@ -83,6 +136,29 @@ body {
                 }
             }
         }
+        .con-wrap {
+            position: relative;
+            margin-top: rem(80);
+            overflow: hidden;
+            .con-bx {
+                width: 100%;
+                opacity: 0;
+                visibility: hidden;
+                filter: blur(10px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: opacity 0.8s, filter 0.8s, visibility 0.8s;
+                &.active {
+                    left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    filter: blur(0);
+                    position: static;
+                }
+            }
+        }
     }
 }
 
@@ -101,6 +177,27 @@ body {
         }
     }
 }
+
+@include mdq-max(md) {
+    .section {
+        &-press-kit {
+            .category-list {
+                display: block;
+                li {
+                    width: 100%;
+                    text-align: center;
+                    button {
+                        width: 261px;
+                        height: 75px;
+                    }
+                    & + li {
+                        margin-top: rem(10);
+                    }
+                }
+            }
+        }
+    }
+} 
 
 @include mdq-max(sm) {
     .section {

@@ -1,0 +1,13 @@
+<ul class="list-bx">
+    <? for($i=1; $i < 10; $i++) {?>
+    <li class="ani-effect">
+      <a href="javascript:void(0)" download>
+        <picture class="img-bx" style="background-image: url(../../assets/images/sub/download_img_<?=$i?>.jpg);">
+          <source media="(min-width: 768px)" srcset="../../assets/images/base_700x400.png">
+          <source media="(min-width: 0px)" srcset="../../assets/images/base_576x702.png">
+          <img src="" alt="썸네일 이미지" loading="lazy">
+        </picture>
+      </a>
+    </li>
+    <?}?>
+  </ul>
